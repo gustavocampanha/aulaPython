@@ -5,8 +5,11 @@ def list_inventario(dict):
     :param dict: dict.
     :return dict listando o inventário.
     """
-    for item in dict:
-        print(f'O item {item} possui {dict[item]} unidades')
+    try:
+        for item in dict:
+            print(f'O item {item} possui {dict[item]} unidades')
+    except:
+        print('Parâmetro em tipo primitivo diferente')
 
 def add_item(dict, item, quantidade):
     """
@@ -22,7 +25,7 @@ def add_item(dict, item, quantidade):
         else:
             dict[item] = quantidade
     except:
-        print('hello')
+        print('Parâmetro em tipo primitivo diferente')
 
 def rem_item(dict, item):
     """
@@ -31,10 +34,13 @@ def rem_item(dict, item):
     :param item: str.
     :return dict remove item do dict
     """
-    if item in dict.keys():
-        dict.pop(item)
-    else:
-        print('Este item não estava no inventário')
+    try:
+        if item in dict.keys():
+            dict.pop(item)
+        else:
+            print('Este item não estava no inventário')
+    except:
+        print('Parâmetro em tipo primitivo diferente')
 
 def find_item(dict, item):
     """
@@ -43,7 +49,10 @@ def find_item(dict, item):
     :param item: str
     :return Bool caso item no dict retorna True
     """
-    if item in dict.keys():
-        return True
-    else:
-        return False
+    try:
+        if item in dict.keys():
+            return True
+        else:
+            return False
+    except:
+        print('Parâmetro em tipo primitivo diferente')
