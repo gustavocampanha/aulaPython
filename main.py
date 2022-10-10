@@ -1,3 +1,3 @@
 import modulos
 
-modulos.interfade()
+modulos.interface()
