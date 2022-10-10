@@ -1,32 +1,49 @@
-def list_inventario(x):
+def list_inventario(dict):
+    
     """
     Retorna o dicionário completo.
-    :param x: dict.
+    :param dict: dict.
     :return dict listando o inventário.
     """
-    return True
+    for item in dict:
+        print(f'O item {item} possui {dict[item]} unidades')
 
-def add_item(x):
+def add_item(dict, item, quantidade):
     """
     Adiciona item ao dicionário do inventário
-    :param x: str.
+    :param dict: dict.
+    :param item: str.
+    :param quantidade: int.
     :return dict adiciona x ao inventário
     """
-    return True
+    try:
+        if item in dict.keys():
+            print(f'Este item já está no inventário e possui {dict[item]} unidade(s)')
+        else:
+            dict[item] = quantidade
+    except:
+        print('hello')
 
-def rem_item(x):
+def rem_item(dict, item):
     """
     Remove item do dicionário do inventário
-    :param x: str.
-    :return dict remove x ao inventário
+    :param dict: dict.
+    :param item: str.
+    :return dict remove item do dict
     """
-    return True
+    if item in dict.keys():
+        dict.pop(item)
+    else:
+        print('Este item não estava no inventário')
 
-def find_item(x, y):
+def find_item(dict, item):
     """
     Busca item no dicionário do inventário
-    :param x: dict.
-    :param y: str
-    :return Bool caso ache o item no inventário
+    :param dict: dict.
+    :param item: str
+    :return Bool caso item no dict retorna True
     """
-    return True
+    if item in dict.keys():
+        return True
+    else:
+        return False
