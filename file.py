@@ -6,19 +6,19 @@ def list_inventario(x):
     """
     return True
 
-def add_item():
+def add_item(x):
     """
     Adiciona item ao dicionário do inventário
-    :param x: dict.
-    :return dict adiciona item ao inventário
+    :param x: str.
+    :return dict adiciona x ao inventário
     """
     return True
 
 def rem_item(x):
     """
-    Remove item ao dicionário do inventário
-    :param x: dict.
-    :return dict remove item ao inventário
+    Remove item do dicionário do inventário
+    :param x: str.
+    :return dict remove x ao inventário
     """
     return True
 
