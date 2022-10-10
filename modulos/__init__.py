@@ -1,0 +1,1 @@
+from modulos.funcoes import list_inventario, add_item, rem_item, find_item, interface
