@@ -79,7 +79,7 @@ def interface():
 
         #Caso o usuário escolha opção 1, seguimos com a listagem do inventário
         if escolha == '1':
-            list_inventario()
+            list_inventario(dic)
 
         elif escolha == '2':
             item = str(input('Digite o item que deseja buscar')).lower()
